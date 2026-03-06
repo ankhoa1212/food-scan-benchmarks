@@ -1,0 +1,340 @@
+=== BENCHMARK SUMMARY (PER VARIANT) ===
+
+--- ollama/gemma3-custom:latest_n ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.227
+  Avg Semantic Precision (Ingredients): 0.436
+  Avg wMAPE (Macros): 46.0%
+  MAPE Calories: 42.2%
+  MAPE Fat:      106.8%
+  MAPE Carbs:    99.0%
+  MAPE Protein:  165.4%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 5.7s
+
+--- ollama/gemma3-custom:latest_f ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.270
+  Avg Semantic Precision (Ingredients): 0.476
+  Avg wMAPE (Macros): 40.8%
+  MAPE Calories: 38.0%
+  MAPE Fat:      110.4%
+  MAPE Carbs:    87.3%
+  MAPE Protein:  139.9%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 6.0s
+
+--- ollama/gemma3-custom:latest_c ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.269
+  Avg Semantic Precision (Ingredients): 0.463
+  Avg wMAPE (Macros): 40.1%
+  MAPE Calories: 36.6%
+  MAPE Fat:      94.9%
+  MAPE Carbs:    103.7%
+  MAPE Protein:  119.7%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 6.5s
+
+--- ollama/gemma3-custom:latest_d ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.271
+  Avg Semantic Precision (Ingredients): 0.407
+  Avg wMAPE (Macros): 69.6%
+  MAPE Calories: 67.5%
+  MAPE Fat:      156.0%
+  MAPE Carbs:    117.5%
+  MAPE Protein:  187.6%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 41.5s
+
+--- ollama/gemma3-custom:latest_s ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.283
+  Avg Semantic Precision (Ingredients): 0.491
+  Avg wMAPE (Macros): 51.5%
+  MAPE Calories: 48.8%
+  MAPE Fat:      140.3%
+  MAPE Carbs:    102.0%
+  MAPE Protein:  196.2%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 7.1s
+
+--- ollama/llava-custom:latest_n ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.337
+  Avg Semantic Precision (Ingredients): 0.688
+  Avg wMAPE (Macros): 44.4%
+  MAPE Calories: 41.8%
+  MAPE Fat:      63.7%
+  MAPE Carbs:    67.4%
+  MAPE Protein:  57.7%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 5.2s
+
+--- ollama/llava-custom:latest_f ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.382
+  Avg Semantic Precision (Ingredients): 0.672
+  Avg wMAPE (Macros): 46.7%
+  MAPE Calories: 44.0%
+  MAPE Fat:      60.1%
+  MAPE Carbs:    80.6%
+  MAPE Protein:  72.7%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 5.8s
+
+--- ollama/llava-custom:latest_c ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.380
+  Avg Semantic Precision (Ingredients): 0.660
+  Avg wMAPE (Macros): 43.8%
+  MAPE Calories: 40.8%
+  MAPE Fat:      59.8%
+  MAPE Carbs:    73.3%
+  MAPE Protein:  66.1%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 6.0s
+
+--- ollama/llava-custom:latest_d ---
+  Success Rate: 86.0% (43/50)
+  Avg Semantic Match (Embeddings): 0.405
+  Avg Semantic Precision (Ingredients): 0.686
+  Avg wMAPE (Macros): 42.1%
+  MAPE Calories: 38.8%
+  MAPE Fat:      57.4%
+  MAPE Carbs:    82.2%
+  MAPE Protein:  55.5%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 114.3s
+
+--- ollama/llava-custom:latest_s ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.372
+  Avg Semantic Precision (Ingredients): 0.703
+  Avg wMAPE (Macros): 45.5%
+  MAPE Calories: 43.3%
+  MAPE Fat:      61.5%
+  MAPE Carbs:    72.1%
+  MAPE Protein:  54.9%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 5.7s
+
+--- ollama/ministral-3-custom:latest_n ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.496
+  Avg Semantic Precision (Ingredients): 0.634
+  Avg wMAPE (Macros): 44.5%
+  MAPE Calories: 42.5%
+  MAPE Fat:      47.6%
+  MAPE Carbs:    66.2%
+  MAPE Protein:  69.2%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 8.5s
+
+--- ollama/ministral-3-custom:latest_f ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.535
+  Avg Semantic Precision (Ingredients): 0.534
+  Avg wMAPE (Macros): 71.2%
+  MAPE Calories: 69.0%
+  MAPE Fat:      71.4%
+  MAPE Carbs:    158.0%
+  MAPE Protein:  117.1%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 10.2s
+
+--- ollama/ministral-3-custom:latest_c ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.512
+  Avg Semantic Precision (Ingredients): 0.513
+  Avg wMAPE (Macros): 58.1%
+  MAPE Calories: 55.9%
+  MAPE Fat:      68.3%
+  MAPE Carbs:    88.6%
+  MAPE Protein:  105.1%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 10.2s
+
+--- ollama/ministral-3-custom:latest_d ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.554
+  Avg Semantic Precision (Ingredients): 0.527
+  Avg wMAPE (Macros): 71.9%
+  MAPE Calories: 69.4%
+  MAPE Fat:      76.9%
+  MAPE Carbs:    132.2%
+  MAPE Protein:  118.2%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 46.4s
+
+--- ollama/ministral-3-custom:latest_s ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.520
+  Avg Semantic Precision (Ingredients): 0.536
+  Avg wMAPE (Macros): 68.9%
+  MAPE Calories: 66.4%
+  MAPE Fat:      79.6%
+  MAPE Carbs:    148.2%
+  MAPE Protein:  117.0%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 10.0s
+
+--- ollama/qwen3.5-custom:latest_n ---
+  Success Rate: 0.0% (0/50)
+--- ollama/qwen3.5-custom:latest_f ---
+  Success Rate: 4.0% (2/50)
+  Avg Semantic Match (Embeddings): 0.833
+  Avg Semantic Precision (Ingredients): 0.900
+  Avg wMAPE (Macros): 64.0%
+  MAPE Calories: 61.5%
+  MAPE Fat:      105.5%
+  MAPE Carbs:    56.4%
+  MAPE Protein:  71.5%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 32.4s
+
+--- ollama/qwen3.5-custom:latest_c ---
+  Success Rate: 0.0% (0/50)
+--- ollama/qwen3.5-custom:latest_d ---
+  Success Rate: 2.0% (1/50)
+  Avg Semantic Match (Embeddings): 0.667
+  Avg Semantic Precision (Ingredients): 0.800
+  Avg wMAPE (Macros): 22.7%
+  MAPE Calories: 23.2%
+  MAPE Fat:      36.8%
+  MAPE Carbs:    12.0%
+  MAPE Protein:  30.0%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 54.6s
+
+--- ollama/qwen3.5-custom:latest_s ---
+  Success Rate: 0.0% (0/50)
+
+=== AGGREGATED SUMMARY (BEST OF N PROMPTS) ===
+
+--- ollama/gemma3-custom:latest (Best) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.339
+  Avg Semantic Precision (Ingredients): 0.620
+  Avg wMAPE (Macros): 39.1%
+  MAPE Calories: 36.4%
+  MAPE Fat:      131.6%
+  MAPE Carbs:    91.5%
+  MAPE Protein:  131.3%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 10.4s
+
+  overall Score: 56.55 / 100
+
+--- ollama/llava-custom:latest (Best) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.422
+  Avg Semantic Precision (Ingredients): 0.789
+  Avg wMAPE (Macros): 34.9%
+  MAPE Calories: 31.7%
+  MAPE Fat:      53.4%
+  MAPE Carbs:    63.0%
+  MAPE Protein:  51.1%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 5.7s
+
+  overall Score: 64.07 / 100
+
+--- ollama/ministral-3-custom:latest (Best) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.592
+  Avg Semantic Precision (Ingredients): 0.676
+  Avg wMAPE (Macros): 47.1%
+  MAPE Calories: 44.4%
+  MAPE Fat:      51.9%
+  MAPE Carbs:    78.8%
+  MAPE Protein:  85.3%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 14.3s
+
+  overall Score: 65.53 / 100
+
+--- ollama/qwen3.5-custom:latest (Best) (from 3 samples) ---
+  Avg Semantic Match (Embeddings): 0.778
+  Avg Semantic Precision (Ingredients): 0.867
+  Avg wMAPE (Macros): 50.2%
+  MAPE Calories: 48.7%
+  MAPE Fat:      82.6%
+  MAPE Carbs:    41.6%
+  MAPE Protein:  57.6%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 39.8s
+
+  overall Score: 62.33 / 100
+
+
+=== AGGREGATED SUMMARY (AVERAGE) ===
+
+--- ollama/gemma3-custom:latest (Avg) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.264
+  Avg Semantic Precision (Ingredients): 0.455
+  Avg wMAPE (Macros): 49.6%
+  MAPE Calories: 46.6%
+  MAPE Fat:      121.7%
+  MAPE Carbs:    101.9%
+  MAPE Protein:  161.7%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 13.4s
+
+  overall Score: 44.97 / 100
+
+--- ollama/llava-custom:latest (Avg) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.371
+  Avg Semantic Precision (Ingredients): 0.675
+  Avg wMAPE (Macros): 44.7%
+  MAPE Calories: 42.0%
+  MAPE Fat:      60.7%
+  MAPE Carbs:    75.0%
+  MAPE Protein:  63.2%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 24.4s
+
+  overall Score: 54.08 / 100
+
+--- ollama/ministral-3-custom:latest (Avg) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.524
+  Avg Semantic Precision (Ingredients): 0.549
+  Avg wMAPE (Macros): 62.9%
+  MAPE Calories: 60.6%
+  MAPE Fat:      68.8%
+  MAPE Carbs:    118.6%
+  MAPE Protein:  105.3%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 17.1s
+
+  overall Score: 52.32 / 100
+
+--- ollama/qwen3.5-custom:latest (Avg) (from 3 samples) ---
+  Avg Semantic Match (Embeddings): 0.778
+  Avg Semantic Precision (Ingredients): 0.867
+  Avg wMAPE (Macros): 50.2%
+  MAPE Calories: 48.7%
+  MAPE Fat:      82.6%
+  MAPE Carbs:    41.6%
+  MAPE Protein:  57.6%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 39.8s
+
+  overall Score: 62.33 / 100
+
+--- ERROR ANALYSIS ---
+Error counts by model:
+model
+ollama/llava-custom:latest_detailed           7
+ollama/qwen3.5-custom:latest_canonical       50
+ollama/qwen3.5-custom:latest_confident       48
+ollama/qwen3.5-custom:latest_conservative    50
+ollama/qwen3.5-custom:latest_detailed        49
+ollama/qwen3.5-custom:latest_step_by_step    50
+
+Most common error messages:
+error
+JSON parsing error                             8
+Empty response from model for fsb_00000.jpg    5
+Empty response from model for fsb_00001.jpg    5
+Empty response from model for fsb_00002.jpg    5
+Empty response from model for fsb_00003.jpg    5
+

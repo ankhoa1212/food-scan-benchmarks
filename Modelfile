@@ -1,0 +1,49 @@
+FROM llama3.2-vision:latest
+TEMPLATE """{{- range $index, $_ := .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
+
+{{ .Content }}
+{{- if eq .Role "system" }}
+You MUST respond with ONLY a valid JSON object using the exact structure below.
+Replace every placeholder marked "string" with an actual text value, and every placeholder marked 0 with an actual number.
+Do NOT include the word "string" or "number" literally in your response.
+{
+  "meal_name": "string",
+  "ingredients": [
+    {
+      "name": "string",
+      "quantity": 0,
+      "unit": "string",
+      "calories": 0,
+      "carbs": 0,
+      "protein": 0,
+      "fat": 0
+    }
+  ],
+  "total_macros": {
+    "calories": 0,
+    "carbs": 0,
+    "protein": 0,
+    "fat": 0
+  }
+}
+All keys must be spelled exactly as shown. Do not abbreviate or shorten any key name.
+{{- end }}
+{{- if gt (len (slice $.Messages $index)) 1 }}<|eot_id|>
+{{- else if ne .Role "assistant" }}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+{{ end }}
+{{- end }}"""
+SYSTEM "
+You are an expert nutritionist.
+You MUST respond with ONLY a valid JSON object.
+Ensure strict JSON syntax:
+- Quote all keys and string values
+- Use commas between fields and list items
+- No trailing commas
+- No markdown, no conversational text
+"
+PARAMETER stop <|eot_id|>
+PARAMETER temperature 0
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+PARAMETER num_predict 1024

@@ -16,10 +16,17 @@ DEFAULT_CONFIG = {
         "gpt-4o",
         "gemini/gemini-2.5-flash-preview-05-20",
         "gemini/gemini-2.5-pro-preview-06-05",
+        "ollama/llama3.2-vision-custom",
+        "ollama/llama3.2-vision-custom-reasoning",
+        "ollama/gemma3-custom",
+        "ollama/llava-custom",
+        "ollama/ministral-3-custom",
+        "ollama/qwen3.5-custom",
+        "ollama/qwen3-vl-custom"
     ],
     "max_items": 20,
     "cache_dir": Path(".cache/food_scan_bench"),
-    "max_concurrent_requests": 50,
+    "max_concurrent_requests": 1,
     "use_embeddings_for_matching": True,
     "report_filename": "benchmark_results.csv",
 }
@@ -29,8 +36,6 @@ async def main(args):
     """Main benchmark execution function."""
     # Suppress warnings
     warnings.filterwarnings("ignore")
-    warnings.filterwarnings("ignore", message=".*Unclosed client session.*")
-    warnings.filterwarnings("ignore", message=".*Unclosed connector.*")
 
     # Load environment variables
     load_dotenv()

@@ -1,0 +1,75 @@
+=== BENCHMARK SUMMARY (PER VARIANT) ===
+
+--- ollama/llama3.2-vision-custom_n ---
+  Success Rate: 100.0% (20/20)
+  Avg Semantic Match (Embeddings): 0.435
+  Avg Semantic Precision (Ingredients): 0.766
+  Avg wMAPE (Macros): 46.5%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 7.0s
+
+--- ollama/llama3.2-vision-custom_f ---
+  Success Rate: 100.0% (20/20)
+  Avg Semantic Match (Embeddings): 0.418
+  Avg Semantic Precision (Ingredients): 0.670
+  Avg wMAPE (Macros): 44.7%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 8.8s
+
+--- ollama/llama3.2-vision-custom_c ---
+  Success Rate: 95.0% (19/20)
+  Avg Semantic Match (Embeddings): 0.427
+  Avg Semantic Precision (Ingredients): 0.711
+  Avg wMAPE (Macros): 43.7%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 8.0s
+
+--- ollama/llama3.2-vision-custom_d ---
+  Success Rate: 100.0% (20/20)
+  Avg Semantic Match (Embeddings): 0.425
+  Avg Semantic Precision (Ingredients): 0.642
+  Avg wMAPE (Macros): 43.8%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 10.2s
+
+--- ollama/llama3.2-vision-custom_s ---
+  Success Rate: 100.0% (20/20)
+  Avg Semantic Match (Embeddings): 0.449
+  Avg Semantic Precision (Ingredients): 0.640
+  Avg wMAPE (Macros): 39.8%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 8.1s
+
+
+=== AGGREGATED SUMMARY (BEST OF N PROMPTS) ===
+
+--- ollama/llama3.2-vision-custom (Best) (from 20 samples) ---
+  Avg Semantic Match (Embeddings): 0.500
+  Avg Semantic Precision (Ingredients): 0.764
+  Avg wMAPE (Macros): 35.8%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 7.6s
+
+  overall Score: 66.12 / 100
+
+
+=== AGGREGATED SUMMARY (AVERAGE) ===
+
+--- ollama/llama3.2-vision-custom (Avg) (from 20 samples) ---
+  Avg Semantic Match (Embeddings): 0.430
+  Avg Semantic Precision (Ingredients): 0.683
+  Avg wMAPE (Macros): 43.5%
+  Avg Cost per Image: $0.0000
+  Avg Response Time: 8.4s
+
+  overall Score: 60.01 / 100
+
+--- ERROR ANALYSIS ---
+Error counts by model:
+model
+ollama/llama3.2-vision-custom_conservative    1
+
+Most common error messages:
+error
+JSON parsing failed for fsb_00006.jpg. Raw    1
+

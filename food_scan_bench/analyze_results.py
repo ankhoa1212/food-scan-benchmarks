@@ -174,6 +174,10 @@ class BenchmarkAnalyzer:
                     f"  Avg Semantic Precision (Ingredients): {successful['semantic_precision_ing'].mean():.3f}"
                 )
                 print(f"  Avg wMAPE (Macros): {successful['wmape_mac'].mean():.1f}%")
+                print(f"  MAPE Calories: {successful['calories_pct_error'].mean():.1f}%")
+                print(f"  MAPE Fat:      {successful['fat_pct_error'].mean():.1f}%")
+                print(f"  MAPE Carbs:    {successful['carbs_pct_error'].mean():.1f}%")
+                print(f"  MAPE Protein:  {successful['protein_pct_error'].mean():.1f}%")
                 print(f"  Avg Cost per Image: ${successful['cost_usd'].mean():.4f}")
                 print(
                     f"  Avg Response Time: {successful['response_time_seconds'].mean():.1f}s\n"
@@ -189,6 +193,10 @@ class BenchmarkAnalyzer:
                     semantic_match_embeddings=("semantic_match_embeddings", "mean"),
                     semantic_precision_ing=("semantic_precision_ing", "mean"),
                     wmape_mac=("wmape_mac", "mean"),
+                    calories_pct_error=("calories_pct_error", "mean"),
+                    fat_pct_error=("fat_pct_error", "mean"),
+                    carbs_pct_error=("carbs_pct_error", "mean"),
+                    protein_pct_error=("protein_pct_error", "mean"),
                     cost_usd=("cost_usd", "mean"),
                     response_time_seconds=("response_time_seconds", "mean"),
                     overall_score=("overall_score", "mean"),
@@ -206,6 +214,10 @@ class BenchmarkAnalyzer:
                     f"  Avg Semantic Precision (Ingredients): {row['semantic_precision_ing']:.3f}"
                 )
                 print(f"  Avg wMAPE (Macros): {row['wmape_mac']:.1f}%")
+                print(f"  MAPE Calories: {row['calories_pct_error']:.1f}%")
+                print(f"  MAPE Fat:      {row['fat_pct_error']:.1f}%")
+                print(f"  MAPE Carbs:    {row['carbs_pct_error']:.1f}%")
+                print(f"  MAPE Protein:  {row['protein_pct_error']:.1f}%")
                 print(f"  Avg Cost per Image: ${row['cost_usd']:.4f}")
                 print(f"  Avg Response Time: {row['response_time_seconds']:.1f}s\n")
                 print(f"  overall Score: {row['overall_score']:.2f} / 100\n")
@@ -222,6 +234,10 @@ class BenchmarkAnalyzer:
                 semantic_match_embeddings=("semantic_match_embeddings", "mean"),
                 semantic_precision_ing=("semantic_precision_ing", "mean"),
                 wmape_mac=("wmape_mac", "mean"),
+                calories_pct_error=("calories_pct_error", "mean"),
+                fat_pct_error=("fat_pct_error", "mean"),
+                carbs_pct_error=("carbs_pct_error", "mean"),
+                protein_pct_error=("protein_pct_error", "mean"),
                 cost_usd=("cost_usd", "mean"),
                 response_time_seconds=("response_time_seconds", "mean"),
                 overall_score=("overall_score", "mean"),
@@ -239,6 +255,10 @@ class BenchmarkAnalyzer:
                 f"  Avg Semantic Precision (Ingredients): {row['semantic_precision_ing']:.3f}"
             )
             print(f"  Avg wMAPE (Macros): {row['wmape_mac']:.1f}%")
+            print(f"  MAPE Calories: {row['calories_pct_error']:.1f}%")
+            print(f"  MAPE Fat:      {row['fat_pct_error']:.1f}%")
+            print(f"  MAPE Carbs:    {row['carbs_pct_error']:.1f}%")
+            print(f"  MAPE Protein:  {row['protein_pct_error']:.1f}%")
             print(f"  Avg Cost per Image: ${row['cost_usd']:.4f}")
             print(f"  Avg Response Time: {row['response_time_seconds']:.1f}s\n")
             print(f"  overall Score: {row['overall_score']:.2f} / 100\n")

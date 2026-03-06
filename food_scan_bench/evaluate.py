@@ -8,7 +8,7 @@ from tqdm.auto import tqdm
 
 from .dataset import FoodScanDataset
 from .metrics import Metrics
-from .models import JanuaryAIModel, LiteModel
+from .models import JanuaryAIModel, LiteModel, OllamaLiteModel
 from .prompts import PROMPT_VARIANTS
 
 
@@ -149,6 +149,9 @@ async def run_evaluation(
     Returns:
         DataFrame containing all evaluation results
     """
+    # Use httpx native transport instead of aiohttp — closes cleanly without leaked sessions
+    import litellm as _litellm
+    _litellm.disable_aiohttp_transport = True
     models_to_run = [models] if isinstance(models, str) else models
     all_prompt_variants = list(PROMPT_VARIANTS.keys())
 
@@ -178,6 +181,9 @@ async def run_evaluation(
             if model_name == "january/food-vision-v1":
                 llm = january_model
                 model_name_for_results = model_name
+            elif model_name.startswith("ollama/"):
+                llm = OllamaLiteModel(model_name, prompt_variant=prompt_variant)
+                model_name_for_results = f"{model_name}_{prompt_variant}"
             else:
                 llm = LiteModel(model_name, prompt_variant=prompt_variant)
                 model_name_for_results = f"{model_name}_{prompt_variant}"
@@ -209,5 +215,27 @@ async def run_evaluation(
 
         # Clean up OpenAI client
         from .metrics import Metrics
-
         await Metrics.close_openai_client()
+
+        # Close litellm's module-level async HTTP handler
+        try:
+            import litellm
+            if litellm.module_level_aclient is not None:
+                await litellm.module_level_aclient.close()
+        except Exception:
+            pass
+
+        # Close all cached AsyncHTTPHandlers (one per provider/config combination)
+        try:
+            import litellm
+            from litellm.llms.custom_httpx.http_handler import AsyncHTTPHandler
+            cache_dict = litellm.in_memory_llm_clients_cache.cache_dict
+            for handler in list(cache_dict.values()):
+                if isinstance(handler, AsyncHTTPHandler):
+                    try:
+                        await handler.close()
+                    except Exception:
+                        pass
+            cache_dict.clear()
+        except Exception:
+            pass

@@ -15,4 +15,8 @@ PROMPT_VARIANTS = {
         "suffix": "f",
         "prompt": "You are a highly confident nutritionist. Analyze this food image and provide your best estimate of the nutritional content. Trust your expertise.",
     },
+    "canonical": {
+        "suffix": "n",
+        "prompt": "You are a conservative nutritionist. Only list ingredients you can visually confirm are present — do not infer hidden sauces, garnishes, or seasonings. Aim for 3–5 main ingredients. Use short, generic ingredient names without adjectives or cooking methods (e.g. 'chicken' not 'grilled chicken breast', 'rice' not 'steamed white rice'). Provide realistic, slightly conservative portion sizes and macros.",
+    },
 }

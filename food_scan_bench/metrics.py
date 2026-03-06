@@ -1,6 +1,7 @@
 import ast
 import asyncio
 import hashlib
+import os
 from difflib import SequenceMatcher
 from typing import List, Tuple, Union
 
@@ -8,6 +9,19 @@ import numpy as np
 import openai
 from scipy.optimize import linear_sum_assignment
 from sklearn.metrics.pairwise import cosine_similarity
+
+# Local embedding model (sentence-transformers) used if OPENAI_API_KEY is not set (for getting semantic similarity)
+_LOCAL_EMBEDDING_MODEL = None
+_LOCAL_EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5"
+_LOCAL_EMBEDDING_DIM = 768  # BAAI/bge-base-en-v1.5
+
+
+def _get_local_embedding_model():
+    global _LOCAL_EMBEDDING_MODEL
+    if _LOCAL_EMBEDDING_MODEL is None:
+        from sentence_transformers import SentenceTransformer
+        _LOCAL_EMBEDDING_MODEL = SentenceTransformer(_LOCAL_EMBEDDING_MODEL_NAME)
+    return _LOCAL_EMBEDDING_MODEL
 
 
 class Metrics:
@@ -50,18 +64,32 @@ class Metrics:
     @staticmethod
     async def get_embedding(text, model="text-embedding-3-small"):
         """
-        Get OpenAI embedding with caching.
+        Get embedding with caching. Uses OpenAI if OPENAI_API_KEY is set,
+        otherwise falls back to a local sentence-transformers model.
 
         Args:
             text: Text to embed
-            model: OpenAI embedding model to use
+            model: OpenAI embedding model to use (ignored for local fallback)
 
         Returns:
             Embedding vector
         """
-        cache_key = hashlib.md5(f"{text}_{model}".encode()).hexdigest()
+        effective_model = model if os.environ.get("OPENAI_API_KEY") else _LOCAL_EMBEDDING_MODEL_NAME
+        cache_key = hashlib.md5(f"{text}_{effective_model}".encode()).hexdigest()
         if cache_key in Metrics._embedding_cache:
             return Metrics._embedding_cache[cache_key]
+
+        # Use local embedding model (don't need API key)
+        if not os.environ.get("OPENAI_API_KEY"):
+            try:
+                local_model = _get_local_embedding_model()  
+                embedding = local_model.encode(text.strip(), normalize_embeddings=True).tolist()
+                Metrics._embedding_cache[cache_key] = embedding
+                return embedding
+            except Exception as e:
+                print(f"Error getting local embedding for '{text}': {e}")
+                return [0.0] * _LOCAL_EMBEDDING_DIM
+
         try:
             if Metrics._openai_client is None:
                 Metrics._openai_client = openai.AsyncOpenAI()
