@@ -22,13 +22,17 @@ DEFAULT_CONFIG = {
         "ollama/llava-custom",
         "ollama/ministral-3-custom",
         "ollama/qwen3.5-custom",
-        "ollama/qwen3-vl-custom"
+        "ollama/qwen3-vl-custom",
+        "deepinfra/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+        "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+        "deepinfra/google/gemma-3-27b-it"
     ],
     "max_items": 20,
     "cache_dir": Path(".cache/food_scan_bench"),
     "max_concurrent_requests": 1,
     "use_embeddings_for_matching": True,
     "report_filename": "benchmark_results.csv",
+    "use_nutrition_db": False,
 }
 
 
@@ -61,6 +65,7 @@ async def main(args):
         max_items=args.max_items,
         max_concurrent=args.max_concurrent,
         use_embeddings=args.use_embeddings,
+        use_nutrition_db=args.use_nutrition_db,
     )
 
     # Save raw results
@@ -69,7 +74,7 @@ async def main(args):
     print(f"Raw results saved to: {results_file}")
 
     # Analyze results
-    analyzer = BenchmarkAnalyzer(results_df)
+    analyzer = BenchmarkAnalyzer(results_df, use_nutrition_db=args.use_nutrition_db)
 
     # Save summary statistics to file instead of printing
     summary_file = results_dir / "summary_statistics.txt"
@@ -173,6 +178,13 @@ def parse_args():
         type=str,
         default=DEFAULT_CONFIG["report_filename"],
         help=f"Filename for exported report (default: {DEFAULT_CONFIG['report_filename']})",
+    )
+
+    parser.add_argument(
+        "--use-nutrition-db",
+        action="store_true",
+        default=DEFAULT_CONFIG["use_nutrition_db"],
+        help="Run benchmark using the nutrition database for ingredient matching and nutrient calculation",
     )
 
     return parser.parse_args()
