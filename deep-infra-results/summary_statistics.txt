@@ -1,0 +1,276 @@
+=== BENCHMARK SUMMARY (PER VARIANT) ===
+
+--- Gemma-3-27b-it (DeepInfra)_n ---
+  Success Rate: 90.0% (45/50)
+  Avg Semantic Match (Embeddings): 0.530
+  Avg Semantic Precision (Ingredients): 0.685
+  Avg wMAPE (Macros): 41.2%
+  MAPE Calories: 39.2%
+  MAPE Fat:      80.0%
+  MAPE Carbs:    49.2%
+  MAPE Protein:  82.1%
+  Avg Cost per Image: $0.0001
+  Avg Response Time: 8.4s
+
+--- Gemma-3-27b-it (DeepInfra)_f ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.669
+  Avg Semantic Precision (Ingredients): 0.560
+  Avg wMAPE (Macros): 51.5%
+  MAPE Calories: 50.2%
+  MAPE Fat:      115.4%
+  MAPE Carbs:    69.6%
+  MAPE Protein:  79.4%
+  Avg Cost per Image: $0.0001
+  Avg Response Time: 11.2s
+
+--- Gemma-3-27b-it (DeepInfra)_c ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.672
+  Avg Semantic Precision (Ingredients): 0.538
+  Avg wMAPE (Macros): 49.7%
+  MAPE Calories: 49.2%
+  MAPE Fat:      128.2%
+  MAPE Carbs:    60.2%
+  MAPE Protein:  68.0%
+  Avg Cost per Image: $0.0001
+  Avg Response Time: 13.6s
+
+--- Gemma-3-27b-it (DeepInfra)_d ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.668
+  Avg Semantic Precision (Ingredients): 0.486
+  Avg wMAPE (Macros): 63.7%
+  MAPE Calories: 62.8%
+  MAPE Fat:      124.3%
+  MAPE Carbs:    83.7%
+  MAPE Protein:  82.2%
+  Avg Cost per Image: $0.0001
+  Avg Response Time: 13.3s
+
+--- Gemma-3-27b-it (DeepInfra)_s ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.641
+  Avg Semantic Precision (Ingredients): 0.609
+  Avg wMAPE (Macros): 51.0%
+  MAPE Calories: 49.9%
+  MAPE Fat:      66.0%
+  MAPE Carbs:    77.1%
+  MAPE Protein:  72.7%
+  Avg Cost per Image: $0.0001
+  Avg Response Time: 10.6s
+
+--- Llama-4-Scout-17B-16E-Instruct (DeepInfra)_n ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.540
+  Avg Semantic Precision (Ingredients): 0.727
+  Avg wMAPE (Macros): 42.7%
+  MAPE Calories: 40.0%
+  MAPE Fat:      64.0%
+  MAPE Carbs:    56.3%
+  MAPE Protein:  88.6%
+  Avg Cost per Image: $0.0003
+  Avg Response Time: 5.9s
+
+--- Llama-4-Scout-17B-16E-Instruct (DeepInfra)_f ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.616
+  Avg Semantic Precision (Ingredients): 0.686
+  Avg wMAPE (Macros): 52.3%
+  MAPE Calories: 49.3%
+  MAPE Fat:      75.3%
+  MAPE Carbs:    79.6%
+  MAPE Protein:  95.4%
+  Avg Cost per Image: $0.0003
+  Avg Response Time: 7.6s
+
+--- Llama-4-Scout-17B-16E-Instruct (DeepInfra)_c ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.581
+  Avg Semantic Precision (Ingredients): 0.659
+  Avg wMAPE (Macros): 47.1%
+  MAPE Calories: 43.9%
+  MAPE Fat:      61.4%
+  MAPE Carbs:    78.4%
+  MAPE Protein:  86.7%
+  Avg Cost per Image: $0.0003
+  Avg Response Time: 7.7s
+
+--- Llama-4-Scout-17B-16E-Instruct (DeepInfra)_d ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.626
+  Avg Semantic Precision (Ingredients): 0.651
+  Avg wMAPE (Macros): 50.4%
+  MAPE Calories: 47.1%
+  MAPE Fat:      73.2%
+  MAPE Carbs:    83.2%
+  MAPE Protein:  96.9%
+  Avg Cost per Image: $0.0003
+  Avg Response Time: 10.8s
+
+--- Llama-4-Scout-17B-16E-Instruct (DeepInfra)_s ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.594
+  Avg Semantic Precision (Ingredients): 0.674
+  Avg wMAPE (Macros): 38.3%
+  MAPE Calories: 35.4%
+  MAPE Fat:      61.1%
+  MAPE Carbs:    60.2%
+  MAPE Protein:  86.8%
+  Avg Cost per Image: $0.0003
+  Avg Response Time: 7.1s
+
+--- Mistral-Small-3.2-24B-Instruct-2506 (DeepInfra)_n ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.542
+  Avg Semantic Precision (Ingredients): 0.669
+  Avg wMAPE (Macros): 72.1%
+  MAPE Calories: 70.9%
+  MAPE Fat:      313.6%
+  MAPE Carbs:    87.7%
+  MAPE Protein:  80.6%
+  Avg Cost per Image: $0.0002
+  Avg Response Time: 2.2s
+
+--- Mistral-Small-3.2-24B-Instruct-2506 (DeepInfra)_f ---
+  Success Rate: 98.0% (49/50)
+  Avg Semantic Match (Embeddings): 0.617
+  Avg Semantic Precision (Ingredients): 0.564
+  Avg wMAPE (Macros): 91.8%
+  MAPE Calories: 93.8%
+  MAPE Fat:      494.7%
+  MAPE Carbs:    93.0%
+  MAPE Protein:  95.2%
+  Avg Cost per Image: $0.0002
+  Avg Response Time: 2.7s
+
+--- Mistral-Small-3.2-24B-Instruct-2506 (DeepInfra)_c ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.593
+  Avg Semantic Precision (Ingredients): 0.563
+  Avg wMAPE (Macros): 55.7%
+  MAPE Calories: 54.7%
+  MAPE Fat:      81.6%
+  MAPE Carbs:    62.9%
+  MAPE Protein:  94.6%
+  Avg Cost per Image: $0.0002
+  Avg Response Time: 2.8s
+
+--- Mistral-Small-3.2-24B-Instruct-2506 (DeepInfra)_d ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.613
+  Avg Semantic Precision (Ingredients): 0.512
+  Avg wMAPE (Macros): 92.4%
+  MAPE Calories: 93.5%
+  MAPE Fat:      374.7%
+  MAPE Carbs:    96.4%
+  MAPE Protein:  109.7%
+  Avg Cost per Image: $0.0002
+  Avg Response Time: 3.2s
+
+--- Mistral-Small-3.2-24B-Instruct-2506 (DeepInfra)_s ---
+  Success Rate: 100.0% (50/50)
+  Avg Semantic Match (Embeddings): 0.602
+  Avg Semantic Precision (Ingredients): 0.588
+  Avg wMAPE (Macros): 56.2%
+  MAPE Calories: 54.9%
+  MAPE Fat:      78.4%
+  MAPE Carbs:    70.8%
+  MAPE Protein:  75.6%
+  Avg Cost per Image: $0.0002
+  Avg Response Time: 2.6s
+
+
+=== AGGREGATED SUMMARY (BEST OF N PROMPTS) ===
+
+--- Gemma-3-27b-it (DeepInfra) (Best) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.731
+  Avg Semantic Precision (Ingredients): 0.705
+  Avg wMAPE (Macros): 37.9%
+  MAPE Calories: 36.3%
+  MAPE Fat:      98.4%
+  MAPE Carbs:    51.9%
+  MAPE Protein:  63.0%
+  Avg Cost per Image: $0.0001
+  Avg Response Time: 10.7s
+
+  overall Score: 70.19 / 100
+
+--- Llama-4-Scout-17B-16E-Instruct (DeepInfra) (Best) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.668
+  Avg Semantic Precision (Ingredients): 0.777
+  Avg wMAPE (Macros): 30.1%
+  MAPE Calories: 27.5%
+  MAPE Fat:      58.4%
+  MAPE Carbs:    50.8%
+  MAPE Protein:  83.3%
+  Avg Cost per Image: $0.0003
+  Avg Response Time: 6.3s
+
+  overall Score: 75.78 / 100
+
+--- Mistral-Small-3.2-24B-Instruct-2506 (DeepInfra) (Best) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.668
+  Avg Semantic Precision (Ingredients): 0.681
+  Avg wMAPE (Macros): 63.4%
+  MAPE Calories: 62.1%
+  MAPE Fat:      337.2%
+  MAPE Carbs:    76.4%
+  MAPE Protein:  91.1%
+  Avg Cost per Image: $0.0002
+  Avg Response Time: 2.5s
+
+  overall Score: 70.90 / 100
+
+
+=== AGGREGATED SUMMARY (AVERAGE) ===
+
+--- Gemma-3-27b-it (DeepInfra) (Avg) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.639
+  Avg Semantic Precision (Ingredients): 0.570
+  Avg wMAPE (Macros): 51.6%
+  MAPE Calories: 50.5%
+  MAPE Fat:      102.3%
+  MAPE Carbs:    68.0%
+  MAPE Protein:  76.0%
+  Avg Cost per Image: $0.0001
+  Avg Response Time: 11.5s
+
+  overall Score: 58.82 / 100
+
+--- Llama-4-Scout-17B-16E-Instruct (DeepInfra) (Avg) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.591
+  Avg Semantic Precision (Ingredients): 0.679
+  Avg wMAPE (Macros): 46.1%
+  MAPE Calories: 43.1%
+  MAPE Fat:      67.0%
+  MAPE Carbs:    71.5%
+  MAPE Protein:  90.9%
+  Avg Cost per Image: $0.0003
+  Avg Response Time: 7.8s
+
+  overall Score: 64.86 / 100
+
+--- Mistral-Small-3.2-24B-Instruct-2506 (DeepInfra) (Avg) (from 50 samples) ---
+  Avg Semantic Match (Embeddings): 0.592
+  Avg Semantic Precision (Ingredients): 0.578
+  Avg wMAPE (Macros): 73.6%
+  MAPE Calories: 73.5%
+  MAPE Fat:      267.0%
+  MAPE Carbs:    82.3%
+  MAPE Protein:  91.1%
+  Avg Cost per Image: $0.0002
+  Avg Response Time: 2.7s
+
+  overall Score: 60.32 / 100
+
+--- ERROR ANALYSIS ---
+Error counts by model:
+model
+deepinfra/google/gemma-3-27b-it_canonical                            5
+deepinfra/mistralai/Mistral-Small-3.2-24B-Instruct-2506_confident    1
+
+Most common error messages:
+error
+Unexpected Error    6
+
